@@ -1,0 +1,14 @@
+body {background-color: yellow;}
+p {text-align: center;
+   border-style: solid;
+   border-color:blueviolet;
+   border-width: 10px  30px ;}
+#p1 {border: 10px solid red;
+     width: 15%}
+.primeiro {font-family: 'Courier New', Courier, monospace;}
+.segundo {font-size: 50px;}
+.primeiro.segundo {color:green;
+                   font-weight: bold;}
+
+
+
