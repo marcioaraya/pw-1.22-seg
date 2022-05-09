@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+        <h1>Formulário</h1>
+ <!--
+     action = nome do programa que irá receber os dados do formulário
+     method = método usado para enviar os dados do navegador para o servidor web
+              GET  - dados enviados na barra de endereços/tem limite de tamanho
+              POST - dados não aparecem na barra de endereços/não tem limite de tamanho
+ -->
+        <form action="" method="GET">
+            <!-- o valor indicado no atributo for na tag label
+                 deve ser o valor do atributo id da tag que deseja referenciar.
+                 Fará que o rótulo seja ligado de modo que ao clicar no rótulo o foco
+                 passe para a caixa de texto correspondente ou  marcar o botão
+                 de rádio correspondente
+            -->
+            <label for="id_nome">Nome</label>
+            <input type="text" 
+                   name="nome" 
+                   id="id_nome"
+                   placeholder="Digite seu nome"
+                   required >
+            <br>
+            <label for="id_sobrenome">Sobrenome</label>
+            <input type="text" name="sobrenome" id="id_sobrenome"
+                   placeholder="Digite seu sobrenome"
+                   required>
+            <br>
+            <!-- não deve usar GET para formulários com dados sensíveis como senhas,
+            porque aparecerá em texto claro na barra de endereços do navegador -->
+            <label for="id_senha">
+                Senha:
+            </label>
+            <input type="password" name="senha" id="id_senha">
+            <br>
+
+<!-- type="radio" usado quando o usuário deve escolher APENAS uma opção 
+     para formar um grupo de botões de rádio, todos devem ter o mesmo
+     valor para o atributo "name" (no exemplo - todos tem name="curso")
+     checked - faz com que o botão de rádio já venha marcado
+     required - se for usado, fará que seja obrigatório marcar uma das opções. 
+                não é necessário se já tiver usado checked
+-->
+
+            <input type="radio" name="curso" value="ADS" id="id_ads" >
+            <label for="id_ads">ADS</label><br>
+
+            <input type="radio" name="curso" value="GTI" id="id_gti" checked>
+            <label for="id_gti">GTI</label><br>
+
+            <input type="radio" name="curso" value="TBD" id="id_tbd">
+            <label for="id_tbd">TBD</label><br>
+
+            <input type="radio" name="curso" value="TSI" id="id_tsi" >
+            <label for="idc_tsi">TSI</label><br>
+            
+            <br>
+            <!--
+                type="checkbox" permite que o usuário escolha zero ou mais opções
+                apenas os itens marcados serão enviados para o servidor
+                o programa que irá receber os dados deve estar preparado para
+                tratar zero ou mais ocorrências
+                
+            -->
+            <input type="checkbox" name="curso1" value="ADS" id="idc_ads" >
+            <label for="idc_ads">ADS</label><br>
+
+            <input type="checkbox" name="curso2" value="GTI" id="idc_gti">
+            <label for="idc_gti">GTI</label><br>
+
+            <input type="checkbox" name="curso3" value="TBD" id="idc_tbd">
+            <label for="idc_tbd">TBD</label><br>
+
+            <input type="checkbox" name="curso4" value="TSI" id="idc_tsi" checked>
+            <label for="idc_tsi">TSI</label><br>
+
+            <br>
+            <input type="date" name="dt_nasc" placeholder="Data nascimento">
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+
+
+        </form>
+
+    
+</body>
+</html>
