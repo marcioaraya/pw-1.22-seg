@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-chrome",
+            "name": "Launch Edge",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "c:\\xampp\\htdocs\\pw-1.22-seg\\aula11-javascript\\index.html"
+            "type": "msedge",
+            "file": "c:\\xampp\\htdocs\\pw-1.22-seg\\aula11-javascript\\"
         }
     ]
 }
