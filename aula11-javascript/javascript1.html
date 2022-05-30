@@ -9,16 +9,17 @@
 <body>
     <h1 id="cab1">Javascript</h1>
 
-    <p>Ao clicar no botão, a cor da palavra Javascript será alterada para azul</p>
-    <p> o método getElementById vai procurar no corpo da página o elemento que tem o atributo 
-         id = "cab1"
-         style é uma propriedade do elemento
-         color é uma propriedade de style
-    </p>
-
-    <button onclick="document.getElementById('cab1').style.color='blue'">
+    <button onclick="MinhaFuncao()">
         Azul
     </button>
+
+    <script>
+        function MinhaFuncao(){
+            document.getElementById('cab1').style.background='black';
+            document.getElementById('cab1').style.color='red';
+        }
+
+    </script>
 
 </body>
 </html>
