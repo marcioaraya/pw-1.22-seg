@@ -16,5 +16,26 @@
         Situação:
         <span id="sit"></span>
     </p>
+
+    <script>
+        let n1 = parseFloat(prompt('Digite a primeira nota:'));
+        let n2 = parseFloat(prompt('Digite a segunda nota:'));
+       
+        let media = (n1 +n2)/2;
+
+        let situacao = '';
+        let cor = '';
+        if (media >=6) {
+            situacao = 'Aprovado';
+            cor = 'blue';
+        } else {
+            situacao = 'Reprovado';
+            cor = 'red';
+        }
+
+        document.getElementById('med').innerHTML = media;
+        document.getElementById('sit').innerHTML = situacao;
+        document.getElementById('sit').style.color=cor;
+    </script>
 </body>
 </html>
