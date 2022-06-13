@@ -12,6 +12,15 @@
   <li>Tea</li>
 </ul>
 
+<p>Nova palavra:<input type="text" id="palavra"></p>
+
+<input type="radio" name="cores" value="red" id="red">
+<label for="red">Vermelho</label>
+<input type="radio" name="cores" value="green" id="green">
+<label for="green">Verde</label>
+<input type="radio" name="cores" value="blue" id="blue">
+<label for="blue">Azul</label>
+
 <p>Click "Append" to append an item to the end of the list:</p>
 
 <button onclick="myFunction()">Append</button>
@@ -22,14 +31,19 @@ function myFunction() {
 // Create an "li" node:
 const node = document.createElement("li");
 
+// obtem a palavra digitada
+let palavra = document.getElementById("palavra").value;
+
+let cor = document.querySelector('input[name="cores"]:checked').value;
 // Create a text node:
-const textnode = document.createTextNode("Water");
+const textnode = document.createTextNode(palavra);
 
 // Append the text node to the "li" node:
 node.appendChild(textnode);
 
 // Append the "li" node to the list:
 document.getElementById("myList").appendChild(node);
+node.style.color = cor;
 }
 </script>
 
