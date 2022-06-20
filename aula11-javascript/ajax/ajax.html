@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Baseado no <a href="https://www.w3schools.com/xml/ajax_intro.asp">exemplo</a> do site w3schools</h1>
+
+
+<div id="demo">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("demo").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "https://viacep.com.br/ws/70097900/json", true);
+    xhttp.send();
+  }
+</script>
+</body>
+</html>
