@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 
+            seletores básicos
+            =================
+            # --> id
+            . --> class
+            tag --> o próprio nome da tag que deseja selecionar  
+
+            Formato da regra do CSS
+            seletor { propriedade: valor; }
+
+            Formas de incluir CSS em uma página:
+            1 - inline: na própria tag, usando atributo style
+                <p style="color:green">
+            2 - interno: incluindo as regras dentro da tag <style>. 
+                A tag <style> fica na seção <head>.
+            3 - arquivo externo: usando a tag
+                <link rel="stylesheet" href="arquivo.css">
+        
+        */
+        h1 {color: red;}
+        h2.capitulo {color: blue;}
+        p {background-color: yellow;}
+        #segundo {color: green;}
+    </style>
+</head>
+<body>
+    <!-- 
+        a) A palavra “Título” tenha cor da fonte vermelha
+        b) A palavra “Capítulo” tenha cor da fonte azul
+        c) Os parágrafos tenham cor de fundo (background-color) amarela
+        d) O parágrafo com texto “Segundo parágrafo” tenha cor da fonte verde.
+    -->
+    <h1>Título</h1>
+    <h2 class="capitulo">Capítulo</h2>
+    <h2 >Outro cabeçalho h2</h2>
+    
+    <p>Primeiro parágrafo</p>
+    <p id="segundo">Segundo parágrafo</p>
+    <p>Terceiro parágrafo</p>
+</body>
+</html>
