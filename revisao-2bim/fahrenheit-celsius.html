@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    <h1>Conversor temperatura</h1>
+    <h2>Fahrenheit - Celsius</h2>     
+    <label for="fahrenheit">Fahrenheit</label>
+    <input type="text" id="fahrenheit" name="fahrenheit" onkeyup="calcula()">
+    
+    <p>Fórmula: °C = (°F - 32) / 1,8  </p>
+
+    <!-- span serve para marcar o local onde aparecerá o valor em graus Fahrenheit 
+         id="celsius" serve para usar o document.getElementById()
+    -->
+    <p>Celsius:<span id="celsius"></span></p>
+    <br>
+    <button onclick="calcula()">Converter Fahrenheit -> Celsius </button>
+    <script>
+        function calcula(){
+            // obtém a ENTRADA (valor em graus Celsius)
+            let f = parseFloat(document.getElementById("fahrenheit").value);
+
+            // efetua o PROCESSAMENTO (aplica a fórmula para converter de Celsius para Fahrenheit)
+            let c = (f - 32)/1.8;
+            let situacao = "";
+            let cor="black";
+            if (c >= 41) {
+                situacao = "Hipertermia";
+                cor = "red";
+            } else if (c>=39.6 && c<41){
+                situacao = "Febre Alta";
+                cor = "orange";
+            } else if (c>=37.6) {
+                situacao = "Febre";
+                cor = "yellow";
+            } else if (c>=36) {
+                situacao = "Normal";
+                cor = "green";
+            } else {
+                situacao = "Hipotermia";
+                cor = "blue";
+            }
+
+            // exibe a SAÍDA (valor em graus Fahrenheit)
+
+            // acrescentei toFixed(2) para limitar para duas casas decimais
+            document.getElementById("celsius").innerHTML = c.toFixed(2) + " " + situacao;
+            document.getElementById("celsius").style.color = cor;
+			document.getElementById("celsius").style.background = "";
+			
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!-- 
+    Questão 3:
+Sobre formulários HTML:
+1) Qual a finalidade dos atributos method e action da tag <form>?
+2) Quais são os valores possíveis para o atributo method?
+3) Qual é a tag que deve ser usada para criar uma caixa de texto de uma linha?
+    <input type="text" ...>
+4) Como fazer para que em um grupo de quatro botões de rádio, apenas um deles fique ativo de cada vez? Qual é o valor de type usado para criar um botão de rádio?
+    Resp: todos devem ter o mesmo valor para o atributo "name".
+    <input type="radio" id="ads" value="10" name="curso" checked>
+    <input type="radio" id="gti" value="20" name="curso">
+    <input type="radio" id="si"  value="30" name="curso">
+    <input type="radio" id="bd"  value="40" name="curso">
+    
+5) Como conectar a tag <label> com um elemento de um formulário?
+    Indica no atributo "for" (para) o valor do "id" do elemento
+    que deseja conectar o label.
+    <label for="ads">Análise e Desenvolvimento de Sistemas</label>
+
+6) Para que servem os elementos <fieldset> e <legend>?
+    <fieldset> - cria borda ao redor de campos de um formulário
+    <legend> - cria uma legenda sobre o fielset correspondente
+
+7) Para que serve o elemento input quando o type é igual a submit?
+        <input type="submit"...> serve para indicar ao navegador que o usuário acabou de informar os dados do formulário, 
+        para que o navegador envie os dados para o servidor.
+
+8) Para que serve o elemento input quando o type é igual a reset?
+   volta o formulário para o mesmo estado que tinha quando foi carregado do servidor.
+
+9) Como criar uma caixa de texto que tenha mais de uma linha?
+        <textarea cols="40" rows="5"></textarea>
+
+10) Escreva um exemplo de código HTML, usando os elementos <select> e <option>.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action = programa que irá receber os dados do formulário -->
+    <!-- method: 
+         - GET: dados do formulário aparecem na barra de endereços do navegador (URL) / tem limite de tamanho (2048 caracteres/bytes)
+         - POST: dados do formulário NÃO aparecem na URL / NÃO tem limite de tamanho
+
+    -->
+    <form method="" action="programa1.php">
+        <input type="text" name="nome" value="Marcio">
+        <fieldset>
+            
+            <legend>Curso</legend>
+            <input type="radio" id="ads" value="10" name="curso" >
+            <label for="ads">Análise e Desenvolvimento de Sistemas</label>
+
+            <input type="radio" id="bd"  value="40" name="curso">
+            <label for="bd">Banco de Dados</label>
+            <input type="radio" id="gti" value="20" name="curso">
+
+            <label for="gti">Gestão de Tecnologia da Informação</label>
+
+            <input type="radio" id="si"  value="30" name="curso" checked>
+            <label for="si">Segurança de  Dados</label>
+        </fieldset>
+        <textarea cols="40" rows="5"></textarea>
+        <br>
+        <label for="sem">Semestre</label>
+        <select name="semestre" id="sem">
+            <option value="1">Primeiro</option>
+            <option value="2">Segundo</option>
+            <option value="3">Terceiro</option>
+            <option value="4">Quarto</option>
+            <option value="5">Quinto</option>
+        </select>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        
+    </form>
+    
+</body>
+</html>

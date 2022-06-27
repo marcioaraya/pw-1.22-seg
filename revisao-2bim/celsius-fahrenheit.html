@@ -13,6 +13,10 @@
     <input type="text" id="celsius" name="celsius">
     
     <p>Fórmula: °F = °C × 1,8 + 32  </p>
+
+    <!-- span serve para marcar o local onde aparecerá o valor em graus Fahrenheit 
+         id="f" serve para usar o document.getElementById()
+    -->
     <p>Fahrenheit:<span id="f"></span></p>
     <br>
     <button onclick="calcula()">Converter Celsius -> Fahrenheit</button>
@@ -20,8 +24,12 @@
         let c = 0;
 
         function calcula(){
+            // obtém a ENTRADA (valor em graus Celsius)
+            
             let c = parseFloat(document.getElementById("celsius").value);
-            let f = c * 1.8 +32;
+            // efetua o PROCESSAMENTO (aplica a fórmula para converter de Celsius para Fahrenheit)
+            let f = c * 1.8 + 32;
+            // exibe a SAÍDA (valor em graus Fahrenheit)
             document.getElementById("f").innerHTML = f;
         }
     </script>
