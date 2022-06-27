@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+
+<body>
+    <h1> For </h1>
+
+    <script>
+        document.write('<pre>');
+
+        for (i = 0; i <= 10; i++) {
+            document.writeln(i);
+        }
+        document.write('</pre>');
+
+        let palavra = 'Análise e Desenvolvimento de Sistemas';
+
+        document.write('** ' + palavra[0]);
+        document.write('** ' + palavra[1]);
+        document.write('** ' + palavra[2]);
+
+        document.write('<p>Usando for</p>');
+        for (i = 0; i < palavra.length; i++) {
+            document.write(palavra[i] + '<br>');
+        }
+
+        document.write('<p>Tabuada</p>');
+
+        for (i = 1; i <= 10; i++) {
+            document.writeln(i + ' x 2 = ' + i * 2 + '<br>');
+        }
+
+        document.write('<p>Tabuada</p>');
+
+        for (i = 1; i <= 10; i++) {
+            document.writeln(i + ' x 3 = ' + i * 3 + '<br>');
+        }
+
+        function tabuada( numero) {
+            document.write('<p>Tabuada</p>');
+
+            for ( i = 1; i <= 10; i++) {
+                document.writeln(i + ' x '+numero+' = ' + i * numero + '<br>');
+            }
+        }
+
+        tabuada(5);
+        tabuada(7);
+
+
+        function soma(a, b){
+            return a + b;
+        }
+
+        let c = soma(10, 20);
+        alert(c);
+
+
+        function media(a, b){
+            return (a + b) / 2;
+        }
+
+        let med = media(30, 40);
+        alert(med);
+        document.write('<p>A média é '+med+'</p>');
+        
+    </script>
+
+</body>
+
+</html>
